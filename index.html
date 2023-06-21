@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <title>SamuelTube</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Tilt+Prism&display=swap"
+    rel="stylesheet">
+
+  <!----------------------CODIGO JAVASCRIPT  ---------------------->
+
+  <script>let count = 0;
+
+    function like() {
+      count++;
+      document.getElementById("likeCount").innerText = count + " Likes";
+      document.getElementById("likeButton").classList.add("clicked");
+
+      setTimeout(function () {
+        document.getElementById("likeButton").classList.remove("clicked");
+      }, 300);
+    }
+  </script>
+  <style type="text/css">
+    /* ------------- CODIGO CSS ----------------------*/
+
+    body {
+
+      background-image: url("img/finding-nemo-fish.webp");
+      background-size: cover;
+
+
+    }
+
+
+
+
+    .cabecalho {
+      font-family: Tilt Prism, sans-serif;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      color: antiquewhite;
+      border: 10%;
+      display: flex;
+      margin-bottom: 3%;
+
+      background-color: black;
+      height: 80px
+    }
+
+    #imgcabecalho {
+      position: relative;
+      width: 11%;
+      left: -22%;
+      top: 0%;
+      
+
+    }
+
+    .borderr{
+      border-radius: 7%;
+    }
+
+    #likeButton {
+      margin-top: 10px;
+      margin-left: 10px;
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      background-image: url("/img/likeedit.png");
+      background-size: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #likeButton.clicked {
+      transform: scale(1.2);
+    }
+
+    #likeCount {
+      margin-top: 0px;
+      margin-left: 10px;
+      color: aliceblue;
+
+    }
+  </style>
+
+
+
+  <section class="cabecalho">
+    
+      <img id=imgcabecalho src="img/youtubevanced.jpg" alt="">
+    
+    <h1>OLA, BEM VINDO AO SAMUELTUBE</h1>
+  </section>
+  </header>
+
+<body>
+
+
+  <!-- Proporção 21:9 -->
+  <section class="videosdesign">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <iframe class="borderr" src="https://drive.google.com/file/d/1kkpHEWhXe1BpqT10RPWqAe86dt4VmJMG/preview" width="560"
+            height="315" allow="autoplay"></iframe>
+        </div>
+
+        <div class="carousel-item">
+          <iframe class="borderr" width="560" height="315" src="https://www.youtube.com/embed/alCR2glqU70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="carousel-item">
+          <iframe class="borderr" width="560" height="315" src="https://www.youtube.com/embed/0LWrZIafx78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        </div>
+
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+    </div>
+  </section>
+  <footer class="rodape">
+    <button id="likeButton" onclick="like()"></button>
+    <p id="likeCount">0 Likes</p>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
